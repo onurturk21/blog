@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const path = require("path");
+
 const nextConfig = {
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -7,6 +9,10 @@ const nextConfig = {
         path: false,
       };
     }
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@": path.join(__dirname, "src"),
+    };
     return config;
   },
   experimental: {
