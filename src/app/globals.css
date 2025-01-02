@@ -2,26 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap");
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root {
+  --background-primary: #332e29;
+  --text-primary: #e8d8c3;
+  --border-color: #483c32;
+  --card-background: #3a342f;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-family: "Times New Roman", "Noto Serif", serif;
+}
+
+.prose {
+  font-family: "Times New Roman", "Noto Serif", serif !important;
+  color: var(--text-primary) !important;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: "Times New Roman", "Noto Serif", serif !important;
+  color: #d4b895 !important;
+}
+
+.prose p,
+.prose ul,
+.prose ol {
+  color: var(--text-primary) !important;
+}
+
+article {
+  background-color: var(--card-background);
+  border-color: var(--border-color) !important;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Link stilleri */
+a {
+  color: #d4b895 !important;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #e8d8c3 !important;
 }
