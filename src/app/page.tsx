@@ -1,9 +1,9 @@
 import BlogList from "@/components/BlogList";
-import { getSortedPostsData } from "@/lib/posts";
+import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 
 export default async function Home() {
-  const posts = getSortedPostsData();
+  const posts = await getSortedPostsData();
 
   return (
     <main className="min-h-screen p-4 sm:p-8 max-w-4xl mx-auto relative">
