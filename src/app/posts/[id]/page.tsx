@@ -1,4 +1,4 @@
-import { getPostData, getAllPostIds } from "../../../lib/posts";
+import { getPostData, getAllPostIds } from "@/lib/posts";
 import { formatDate } from "@/lib/utils";
 import Link from "next/link";
 

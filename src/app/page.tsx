@@ -1,5 +1,5 @@
 import BlogList from "@/components/BlogList";
-import { getSortedPostsData } from "../lib/posts";
+import { getSortedPostsData } from "@/lib/posts";
 import Link from "next/link";
 
 export default async function Home() {
